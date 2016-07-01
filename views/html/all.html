@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	<title><%= title %></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="../views/css/temp.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<h1><%= title %></h1>
+	<a href="http://localhost:8080/new">Add Contacts</a><br><br><hr>		
+	<% for(var i=0; i<rows.length; i++) {%>
+		<li>NAME    : <%= rows[i].con_name %></li>
+		<li>CONTACT : <%= rows[i].con_num %></li>
+	  	<a href="http://localhost:8080/edit/<%= rows[i].con_id %>">Edit</a> 
+		<a href="http://localhost:8080/delete/<%= rows[i].con_id %>">Delete</a>
+		<hr>		   
+	<% } %>
+ 	<p>
+ 		#priume
+ 	</p>
+</body>
+</html>
